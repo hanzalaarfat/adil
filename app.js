@@ -32,6 +32,9 @@ app.use(express.static(path.join(__dirname, "public")));
 
 // dotenv.config({ path: "./config.env" });
 
+app.use(express.urlencoded({ extended: false }));
+app.use(express.static(path.join(__dirname, "public")));
+
 app.get("/", (req, res) => {
   res.render("home", { message: "Homepage" });
 });
