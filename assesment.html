@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <p>Click the button to demonstrate the prompt box.</p>
+      <button onclick="myFunction()">Try it</button>
+
+      <canvas
+        id="myCanvas"
+        width="200"
+        height="100"
+        style="border: 1px solid #000000"
+      >
+      </canvas>
+      <p id="demo"></p>
+    </div>
+    <script>
+      function myFunction() {
+        var number = prompt("Please enter number of rectengle", 1);
+        var height = prompt("Please enter height", 50);
+        var width = prompt("Please enter width", 50);
+        console.log(number);
+        if (number != null) {
+          for (let i = 1; i <= number; i++) {
+            document.getElementById("demo").innerHTML =
+              "Hello " + number + "! How are you today?";
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
